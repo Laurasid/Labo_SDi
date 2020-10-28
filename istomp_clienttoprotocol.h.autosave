@@ -1,0 +1,24 @@
+#ifndef ISTOMP_CLIENTTOPROTOCOL_H
+#define ISTOMP_CLIENTTOPROTOCOL_H
+
+
+class ISTOMP_ClientToProtocol
+{
+public:
+    virtual ~ISTOMP_ClientToProtocol();
+    
+    //Connection services
+    virtual void connectRequest();
+    virtual void disconnectRequest();
+    
+    //Data services
+    virtual void subscribeRequest();
+    virtual void unsubscribeRequest();
+    virtual void messageRequest();
+    virtual void messageResponse();
+    
+protected :
+    virtual ISTOMP_ClientToProtocol();
+};
+
+#endif // ISTOMP_CLIENTTOPROTOCOL_H
