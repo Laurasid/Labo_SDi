@@ -4,9 +4,11 @@ CONFIG -= app_bundle
 HEADERS += \
         istomp_clienttoprotocol.h \
         istomp_protocoltoclient.h \
-        stompframe.h
+        stompclient.h \
+        stompframe.h \
+        stompprotocollayer.h
 SOURCES += \
-        istomp_clienttoprotocol.cpp \
-        istomp_protocoltoclient.cpp \
         main.cpp \
-        stompframe.cpp
+        stompclient.cpp \
+        stompframe.cpp \
+        stompprotocollayer.cpp

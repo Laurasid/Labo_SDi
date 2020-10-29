@@ -1,0 +1,64 @@
+#include "stompclient.h"
+
+STOMPClient::STOMPClient()
+{
+    
+}
+
+STOMPClient::~STOMPClient()
+{
+    _isConnected = false;
+}
+
+void STOMPClient::connectConfirmation(bool status)
+{
+    _isConnected = status;
+    qDebug() << "Connect confirmation, status : " << status;
+}
+
+void STOMPClient::disconnectConfirmation(bool status)
+{
+    _isConnected = !status;
+    qDebug() << "Connect confirmation"; 
+}
+
+void STOMPClient::disconnectIndication()
+{
+    _isConnected = false;
+    qDebug() << "Disconnect indication"; 
+}
+
+void STOMPClient::sendConfirmation(bool status)
+{
+    _sendStatus = status;
+    qDebug() << "Send confirmation, status : " << status; 
+}
+
+void STOMPClient::subscribeConfirmation(bool status)
+{
+    _subscribeStatus = status;
+    qDebug() << "Subscribe confirmation" << status; 
+}
+
+void STOMPClient::unsubscribeConfirmation(bool status)
+{
+    _subscribeStatus = !status;
+    qDebug() << "Unsubscribe confirmation"; 
+}
+
+void STOMPClient::messageConfirmation(bool status)
+{
+    _messageStatus = status;
+    qDebug() << "Message confirmation"; 
+}
+
+void STOMPClient::messageIndication(QString id, QString destination, QString body)
+{
+    qDebug() << "Message indication"; 
+    
+    if(id==ID){
+        destinationTemp = destination;
+        bodyTemp = body;
+    }
+    
+}

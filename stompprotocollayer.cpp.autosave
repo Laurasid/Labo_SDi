@@ -1,0 +1,49 @@
+#include "stompprotocollayer.h"
+
+STOMPProtocolLayer::STOMPProtocolLayer()
+{
+
+}
+
+STOMPProtocolLayer::~STOMPProtocolLayer()
+{
+
+}
+
+void STOMPProtocolLayer::connectRequest(QString host, QString port, QString username, QString password)
+{
+    //Create header
+    
+    //Create body
+    
+    //Create frame
+    STOMPFrame frame = STOMPFrame(STOMPFrame::Command::STOMP)
+    
+    //Send frame
+    
+}
+
+void STOMPProtocolLayer::disconnectRequest()
+{
+
+}
+
+void STOMPProtocolLayer::subscribeRequest(QString id, QString destination)
+{
+
+}
+
+void STOMPProtocolLayer::unsubscribeRequest(QString id, QString destination)
+{
+
+}
+
+void STOMPProtocolLayer::sendRequest(QString destination, QString body)
+{
+
+}
+
+void STOMPProtocolLayer::messageResponse(QString destination, QString body)
+{
+
+}

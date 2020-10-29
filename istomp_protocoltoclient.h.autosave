@@ -17,7 +17,7 @@ public:
     virtual void sendConfirmation(bool status) = 0;
     virtual void subscribeConfirmation(bool status) = 0;
     virtual void messageConfirmation(bool status) = 0;
-    virtual void messageIndication(uint32_t id, QString destination, QString body) = 0;
+    virtual void messageIndication(QString id, QString destination, QString body) = 0;
 
 protected:
     ISTOMP_ProtocolToClient() = default;
